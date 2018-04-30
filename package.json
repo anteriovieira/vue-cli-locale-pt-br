@@ -1,0 +1,21 @@
+{
+  "name": "vue-cli-locale-pt-br",
+  "version": "0.0.1",
+  "description": "PT-Br localization for @vue/cli",
+  "unpkg": "./locales/pt-br.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anteriovieira/vue-cli-locale-pt-br.git"
+  },
+  "keywords": [
+    "vuejs",
+    "vue-cli",
+    "locale"
+  ],
+  "author": "Antério Vieira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anteriovieira/vue-cli-locale-pt-br/issues"
+  },
+  "homepage": "https://github.com/anteriovieira/vue-cli-locale-pt-br#readme"
+}
