@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-locale-pt-br",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PT-Br localization for @vue/cli",
   "unpkg": "./locales/pt-br.json",
   "repository": {
