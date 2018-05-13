@@ -7,14 +7,14 @@
       }
     },
     "file-diff-view": {
-      "files-changed": "Arquivos modificados",
+      "files-changed": "Arquivos alterados",
       "search-file": "Pesquisar um arquivo",
       "empty": "Nenhuma alteração encontrada",
       "modals": {
         "commit": {
-          "title": "Validar alterações",
+          "title": "Commit alterações",
           "input": "Digite uma mensagem para o commit",
-          "subtitle": "Salva as alterações feitas no repositório",
+          "subtitle": "Registra alterações no repositório",
           "actions": {
             "commit": "Commit",
             "cancel": "Cancelar"
@@ -24,7 +24,7 @@
       "actions": {
         "collapse-all": "Fechar tudo",
         "expand-all": "Abrir tudo",
-        "commit": "Validar alterações",
+        "commit": "Commit alterações",
         "skip": "Pular",
         "continue": "Continuar",
         "refresh": "Atualizar"
@@ -33,22 +33,22 @@
     "folder-explorer": {
       "toolbar": {
         "tooltips": {
-          "parent-folder": "Abra a pasta pai",
-          "edit-path": "Editar o caminho",
+          "parent-folder": "Abra pasta pai",
+          "edit-path": "Editar caminho",
           "favorite": "Adicionar/Remover dos favoritos",
-          "favorite-folders": "Pastas de favoritos",
+          "favorite-folders": "Pastas favoritos",
           "refresh": "Atualizar"
         },
-        "placeholder": "Digite o caminho completo de uma pasta",
-        "empty": "Nenhuma pasta favorita"
+        "placeholder": "Digite o caminho completo para uma pasta",
+        "empty": "Nenhuma pasta favorita ainda."
       }
     },
     "list-item-info": {
       "more-info": "Mais informações"
     },
     "logger-view": {
-      "title": "Log",
-      "empty": "Nenhuma entrada de log",
+      "title": "Logs",
+      "empty": "Nenhuma entrada de log ainda.",
       "buttons": {
         "clear": "Limpar log",
         "scroll": "Rolar para baixo",
@@ -85,7 +85,7 @@
       "official": "Oficial",
       "installed": "Instalado",
       "actions": {
-        "update": "Atualizado {target}"
+        "update": "Atualizar {target}"
       }
     },
     "prompt-list": {
@@ -96,15 +96,15 @@
     },
     "status-bar": {
       "project": {
-        "tooltip": "Projeto atual<br><i>Clique para mostrar o gestor de projetos</i>",
-        "empty": "Nenhum projeto aberto"
+        "tooltip": "Projeto atual<br><i>Clique para mostrar o Gestor de Projetos</i>",
+        "empty": "Nenhum projeto"
       },
       "path": {
-        "tooltip": "Arquivo de trabalho atual"
+        "tooltip": "Pasta de trabalho atual"
       },
       "log": {
-        "tooltip": "Log<br><i>Clique para mostrar/ocultar logs do Vue CLI</i>",
-        "empty": "Nenhuma entrada no log"
+        "tooltip": "Logs<br><i>Clique para mostrar/ocultar logs do Vue CLI</i>",
+        "empty": "Nenhuma entrada de log ainda."
       },
       "report-bug": "Reportar bug"
     },
@@ -113,17 +113,26 @@
         "clear": "Limpar console",
         "scroll": "Rolar para baixo"
       }
+    },
+    "view-badge": {
+      "labels": {
+        "tasks": {
+          "error": "Status de erro",
+          "running": "Status de execução",
+          "done": "Status finalizado"
+        }
+      }
     }
   },
   "mixins": {
     "progress": {
-      "creating": "Criando um novo projeto...",
-      "git-init": "Inicializando o repositório git...",
+      "creating": "Criando projeto...",
+      "git-init": "Inicializando repositório git...",
       "plugins-install": "Instalando plugins Vue CLI. Isso pode levar algum tempo...",
       "invoking-generators": "Invocando geradores...",
       "deps-install": "Instalando dependências adicionais...",
       "completion-hooks": "Disparando hooks finais...",
-      "fetch-remote-preset": "Baixando preset remotamente...",
+      "fetch-remote-preset": "Baixando predefinições remotamente...",
       "done": "Projeto criado com sucesso",
       "plugin-install": "Instalando {arg0}...",
       "plugin-uninstall": "Desinstalando {arg0}...",
@@ -144,7 +153,7 @@
   },
   "views": {
     "project-select": {
-      "title": "Gerenciador de projetos Vue",
+      "title": "Gerenciador de Projetos Vue",
       "tabs": {
         "projects": "Projetos",
         "create": "Criar",
@@ -201,7 +210,16 @@
           "modal": {
             "title": "Configurar a predefinição remota",
             "body": "Disponível em breve..."
-          }
+          },
+          "manual": {
+            "name": "Manual",
+            "description": "Selecionar recursos manualmente"
+          },
+          "remote": {
+            "name": "Predefinição remota",
+            "description": "Buscar uma predefinição de um repositório git"
+          },
+          "default-preset": "Predefinição padrão"
         },
         "features": {
           "title": "Recursos",
@@ -211,6 +229,10 @@
             "previous": "Anterior",
             "next": "Próximo",
             "create": "Criar projeto"
+          },
+          "userConfigFiles": {
+            "name": "Use arquivos de configuração",
+            "description": "Use arquivos de configuração específicos (como '.babelrc') em vez de usar 'package.json'."
           }
         },
         "configuration": {
@@ -240,12 +262,12 @@
       "heading": "Plugins instalados"
     },
     "project-plugins-add": {
-      "title": "Adicionar plugin",
-      "plugin": "um plugin",
+      "title": "Adicionar um plugin",
+      "plugin": "plugin",
       "tabs": {
         "search": {
           "label": "Pesquisa",
-          "search-input": "Pesquisar plugin",
+          "search-input": "Pesquisar um plugin",
           "not-found": "Nenhum resultado encontrado",
           "buttons": {
             "cancel": "Cancelar",
@@ -261,7 +283,7 @@
           }
         },
         "diff": {
-          "label": "Arquivos modificados"
+          "label": "Arquivos alterados"
         }
       },
       "modal": {
@@ -280,7 +302,8 @@
     "project-configuration-details": {
       "actions": {
         "cancel": "Cancelar as alterações",
-        "save": "Salvar alterações"
+        "save": "Salvar alterações",
+        "more-info": "Mais informações"
       }
     },
     "project-tasks": {
@@ -294,6 +317,7 @@
       },
       "command": "Comando de script",
       "parameters": "Parâmetros",
+      "parameters-info": "Os parâmetros serão salvos quando a tarefa for executada.",
       "more-info": "Mais informaçoes",
       "output": "Saída"
     },
@@ -312,7 +336,7 @@
       "webpack-status": {
         "Success": "Sucesso",
         "Failed": "Falhou",
-        "Compiling": "Compilando...",
+        "Compiling": "Compilando",
         "Invalidated": "Invalidado",
         "Idle": "Oucupado"
       },
@@ -321,7 +345,7 @@
           "status": "Estado",
           "errors": "Erros",
           "warnings": "Avisos",
-          "assets": "Diretórios",
+          "assets": "Ativos",
           "modules": "Módulos",
           "deps": "Dependências"
         }
@@ -351,10 +375,30 @@
     },
     "tasks": {
       "serve": {
-        "description": "Compilação e recarga quente (HMR) para desenvolvimento"
+        "description": "Compilação e recarga quente (HMR) para desenvolvimento",
+        "open": "Abra o navegador quano servidor iniciar",
+        "mode": "Especificar modo env",
+        "host": "Especificar host",
+        "port": "Especificar port",
+        "https": "Use HTTPS"
       },
       "build": {
-        "description": "Compile e diminua para produção"
+        "description": "Compile e diminua para produção",
+        "mode": "Especificar modo env",
+        "dest": "Pasta de destino",
+        "target": {
+          "description": "Pacote de destino",
+          "app": "Aplicativo web",
+          "lib": "Biblioteca",
+          "wc": "Componente Web",
+          "wc-async": "Componente web assíncrono"
+        },
+        "name": "Nome para o modo de biblioteca ou componente web (padrão: 'name' em package.json ou entry filename)"
+      },
+      "inspect": {
+        "description": "Inspecione a configuração resolvida do webpack",
+        "mode": "Especificar modo env",
+        "verbose": "Mostrar todas as definições de função na saída"
       }
     }
   },
@@ -366,6 +410,68 @@
           "strongly-recommended": "Altamente recomendado",
           "recommended": "Recomendado"
         }
+      }
+    },
+    "eslint-extra": {
+      "description": "Configurações extra ESLint",
+      "lintOnSave": {
+        "message": "Analisar ao salvar",
+        "description": "Analisar automaticamente código fonte ao salvar"
+      }
+    }
+  },
+  "tasks": {
+    "lint": {
+      "description": "Analisar e corrigir arquivos",
+      "noFix": "Não corrigir erros"
+    }
+  },
+  "pwa": {
+    "config": {
+      "pwa": {
+        "description": "Aplicativo Web progressivo",
+        "workboxPluginMode": {
+          "message": "Modo Plugin",
+          "description": "Isso permite que você escolha entre os dois modos suportados pelo `workbox-webpack-plugin` subjacente"
+        },
+        "name": {
+          "message": "App name",
+          "description": "App name displayed on the Splash screen and various other places. Also used as the value for the `apple-mobile-web-app-title` meta tag in the generated HTML."
+        },
+        "themeColor": {
+          "message": "Theme color",
+          "description": "Color used to theme the browser"
+        },
+        "backgroundColor": {
+          "message": "Splash background color",
+          "description": "Background color used for the app splash screen"
+        },
+        "msTileColor": {
+          "message": "Windows app tile color",
+          "description": "Color used for the app tile on Windows"
+        },
+        "appleMobileWebAppStatusBarStyle": {
+          "message": "Apple mobile status bar style",
+          "description": "Style for the web app status bar on iOS"
+        }
+      }
+    }
+  },
+  "cypress": {
+    "tasks": {
+      "test": {
+        "description": "Run e2e tests with `cypress run`",
+        "headless": "Run in headless mode without GUI",
+        "mode": "Specify the mode the dev server should run in",
+        "url": "Run e2e tests against given url instead of auto-starting dev server"
+      }
+    }
+  },
+  "nightwatch": {
+    "tasks": {
+      "test": {
+        "description": "Run e2e tests with nightwatch",
+        "url": "Run e2e tests against given url instead of auto-starting dev server"
       }
     }
   }
