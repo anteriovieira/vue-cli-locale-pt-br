@@ -1,9 +1,13 @@
 {
   "components": {
+    "connection-status": {
+      "disconnected": "Desconectado do servidor da UI",
+      "connected": "Conectado!"
+    },
     "file-diff": {
       "binary": "Arquivo binário não exibido",
       "actions": {
-        "open": "Abra no editor"
+        "open": "Abrir no editor"
       }
     },
     "file-diff-view": {
@@ -27,7 +31,7 @@
         "commit": "Commit alterações",
         "skip": "Pular",
         "continue": "Continuar",
-        "refresh": "Atualizar"
+        "refresh": "Recarregar"
       }
     },
     "folder-explorer": {
@@ -36,8 +40,8 @@
           "parent-folder": "Abra pasta pai",
           "edit-path": "Editar caminho",
           "favorite": "Adicionar/Remover dos favoritos",
-          "favorite-folders": "Pastas favoritos",
-          "refresh": "Atualizar"
+          "favorite-folders": "Pastas favoritas",
+          "refresh": "Recarregar"
         },
         "placeholder": "Digite o caminho completo para uma pasta",
         "empty": "Nenhuma pasta favorita ainda."
@@ -48,9 +52,9 @@
     },
     "logger-view": {
       "title": "Logs",
-      "empty": "Nenhuma entrada de log ainda.",
+      "empty": "Nenhuma entrada de log ainda",
       "buttons": {
-        "clear": "Limpar log",
+        "clear": "Limpar logs",
         "scroll": "Rolar para baixo",
         "close": "Fechar"
       }
@@ -106,13 +110,17 @@
         "tooltip": "Logs<br><i>Clique para mostrar/ocultar logs do Vue CLI</i>",
         "empty": "Nenhuma entrada de log ainda."
       },
-      "report-bug": "Reportar bug"
+      "report-bug": "Reportar bug",
+      "translate": "Ajudar a traduzir"
     },
     "terminal-view": {
       "buttons": {
         "clear": "Limpar console",
         "scroll": "Rolar para baixo"
       }
+    },
+    "top-bar": {
+      "no-favorites": "Nenhum projeto favorito"
     },
     "view-badge": {
       "labels": {
@@ -128,11 +136,11 @@
     "progress": {
       "creating": "Criando projeto...",
       "git-init": "Inicializando repositório git...",
-      "plugins-install": "Instalando plugins Vue CLI. Isso pode levar algum tempo...",
+      "plugins-install": "Instalando plugins Vue CLI. Isso pode demorar um pouco...",
       "invoking-generators": "Invocando geradores...",
       "deps-install": "Instalando dependências adicionais...",
       "completion-hooks": "Disparando hooks finais...",
-      "fetch-remote-preset": "Baixando predefinições remotamente...",
+      "fetch-remote-preset": "Baixando predefinições remotas...",
       "done": "Projeto criado com sucesso",
       "plugin-install": "Instalando {arg0}...",
       "plugin-uninstall": "Desinstalando {arg0}...",
@@ -143,8 +151,8 @@
   "types": {
     "task": {
       "status": {
-        "idle": "Oucupado",
-        "running": "Carregando",
+        "idle": "Ocioso",
+        "running": "Executando",
         "done": "Finalizado",
         "error": "Erro",
         "terminated": "Terminado"
@@ -153,11 +161,11 @@
   },
   "views": {
     "project-select": {
-      "title": "Gerenciador de Projetos Vue",
+      "title": "Gestor de Projetos Vue",
       "tabs": {
         "projects": "Projetos",
         "create": "Criar",
-        "import": "Improtar"
+        "import": "Importar"
       },
       "buttons": {
         "create": "Criar um novo projeto aqui",
@@ -173,8 +181,8 @@
             "folder": {
               "label": "Pasta do projeto",
               "placeholder": "meu-app",
-              "tooltip": "Edite a pasta de destino",
-              "action": "Selecione esta pasta"
+              "tooltip": "Editar pasta de destino",
+              "action": "Selecionar esta pasta"
             },
             "manager": {
               "label": "Gerenciador de Pacotes",
@@ -232,7 +240,7 @@
           },
           "userConfigFiles": {
             "name": "Use arquivos de configuração",
-            "description": "Use arquivos de configuração específicos (como '.babelrc') em vez de usar 'package.json'."
+            "description": "Use arquivos de configuração específicos (como '.babelrc') em vez de usar o 'package.json'."
           }
         },
         "configuration": {
@@ -242,15 +250,15 @@
             "create": "Criar projeto"
           },
           "modal": {
-            "title": "Salvar em uma nova predefinição",
+            "title": "Salvar como nova predefinição",
             "body": {
-              "title": "Predefinição",
+              "title": "Nome da redefinição",
               "subtitle": "Salvar recursos e configurações em uma nova predefinição"
             },
             "buttons": {
               "cancel": "Cancelar",
-              "continue": "Continue sem salvar",
-              "create": "Crie uma nova predefinição"
+              "continue": "Continuar sem salvar",
+              "create": "Criar uma nova predefinição"
             }
           }
         }
@@ -275,11 +283,11 @@
           }
         },
         "configuration": {
-          "label": "Configuraççies",
+          "label": "Configurações",
           "heading": "Instalando {target}",
           "buttons": {
             "cancel": "Cancelar",
-            "finish": "Instalação finalizada"
+            "finish": "Finalizar instalação"
           }
         },
         "diff": {
@@ -324,7 +332,7 @@
     "about": {
       "title": "Sobre",
       "description": "<a href=\"https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-ui\" target=\"_blank\">@vue/cli-ui</a> é um pacote incluído no @vue/cli que exibe uma interface gráfica.",
-      "quote": "Vue-cli 3.x é uma reescrita completa, com muitos novos recursos impressionantes. Você terá que selecionar recursos como roteamento, Vuex ou Typescript, depois adicionar e atualizar blocos de construção chamados \"plugins vue-cli\". Mas ter muito mais opções também significa que a ferramenta agora está mais complexa e mais difícil de começar a usar. É por isso que pensamos que ter uma GUI completa ajudaria a descobrir os novos recursos, pesquisar e instalar plug-ins vue-cli e desbloquear mais possibilidades em geral, sem ser limitado por uma interface de terminal. Resumindo, o vue-cli não apenas permitirá que você inicialize um novo projeto facilmente, mas também permanecerá útil para o trabalho em andamento!",
+      "quote": "Vue-cli 3.x é uma reescrita completa, com muitos novos recursos impressionantes. Você terá que selecionar recursos como roteamento, Vuex ou TypeScript, depois adicionar e atualizar blocos de construção chamados \"plugins vue-cli\". Mas ter mais opções também significa que a ferramenta agora está mais complexa e mais difícil de começar a usar. É por isso que pensamos que ter uma GUI completa ajudaria a descobrir os novos recursos, pesquisar e instalar plugins vue-cli e desbloquear mais possibilidades em geral, sem ser limitado por uma interface de terminal. Resumindo, o vue-cli não apenas permitirá que você inicialize um novo projeto facilmente, mas também permanecerá útil para o trabalho em andamento!",
       "links": "Links úteis",
       "back": "Voltar"
     }
@@ -338,11 +346,11 @@
         "Failed": "Falhou",
         "Compiling": "Compilando",
         "Invalidated": "Invalidado",
-        "Idle": "Oucupado"
+        "Idle": "Ocioso"
       },
       "build-status": {
         "labels": {
-          "status": "Estado",
+          "status": "Status",
           "errors": "Erros",
           "warnings": "Avisos",
           "assets": "Ativos",
@@ -357,8 +365,8 @@
         "title": "Dependências"
       },
       "asset-list": {
-        "title": "Fichiers",
-        "size-warning": "Este arquivo é grande, você pode reduzir seu tamanho com divisão de código (Code-splitting)"
+        "title": "Ativos",
+        "size-warning": "Este arquivo é grande, você pode reduzir seu tamanho com divisão de código (code-splitting)"
       }
     },
     "analyzer": {
@@ -371,32 +379,33 @@
       "stats": "Estatísticas",
       "parsed": "Analisado",
       "gzip": "Gzip",
-      "help": "<b>Estatísticas:</b> tamanho dos dados estatísticos do webpack. <br> <b> Analisado: </ b> tamanho das fontes extraídas (após os plugins de minificação). Mais preciso. <br> <b> Gzip: </ b> tamanho na fonte extraída compactada."
+      "help": "<b>Estatísticas:</b> tamanho dos dados estatísticos do webpack.<br><b>Analisado:</b> tamanho das fontes extraídas (após os plugins de minificação). Mais preciso.<br><b>Gzip:</b> tamanho das fontes extraídas compactadas."
     },
     "tasks": {
       "serve": {
-        "description": "Compilação e recarga quente (HMR) para desenvolvimento",
-        "open": "Abra o navegador quano servidor iniciar",
+        "description": "Compila e atualiza automaticamente (HMR) para desenvolvimento",
+        "open": "Abrir navegador quando o servidor iniciar",
         "mode": "Especificar modo env",
         "host": "Especificar host",
         "port": "Especificar port",
         "https": "Use HTTPS"
       },
       "build": {
-        "description": "Compile e diminua para produção",
+        "description": "Compila e minifica para produção",
         "mode": "Especificar modo env",
         "dest": "Pasta de destino",
         "target": {
           "description": "Pacote de destino",
           "app": "Aplicativo web",
           "lib": "Biblioteca",
-          "wc": "Componente Web",
+          "wc": "Componente web",
           "wc-async": "Componente web assíncrono"
         },
-        "name": "Nome para o modo de biblioteca ou componente web (padrão: 'name' em package.json ou entry filename)"
+        "name": "Nome para o modo de biblioteca ou componente web (padrão: 'name' em package.json ou arquivo de entrada)",
+        "watch": "Observar mudanças"
       },
       "inspect": {
-        "description": "Inspecione a configuração resolvida do webpack",
+        "description": "Inspecionar a configuração resolvida do webpack",
         "mode": "Especificar modo env",
         "verbose": "Mostrar todas as definições de função na saída"
       }
@@ -413,7 +422,7 @@
       }
     },
     "eslint-extra": {
-      "description": "Configurações extra ESLint",
+      "description": "Configurações extra do ESLint",
       "lintOnSave": {
         "message": "Analisar ao salvar",
         "description": "Analisar automaticamente código fonte ao salvar"
@@ -429,30 +438,30 @@
   "pwa": {
     "config": {
       "pwa": {
-        "description": "Aplicativo Web progressivo",
+        "description": "Progressive Web App",
         "workboxPluginMode": {
-          "message": "Modo Plugin",
+          "message": "Modo plugin",
           "description": "Isso permite que você escolha entre os dois modos suportados pelo `workbox-webpack-plugin` subjacente"
         },
         "name": {
-          "message": "App name",
-          "description": "App name displayed on the Splash screen and various other places. Also used as the value for the `apple-mobile-web-app-title` meta tag in the generated HTML."
+          "message": "Nome do aplicativo",
+          "description": "Nome do aplicativo exibido na splash screen e vários outros lugares. Também será usado como valor para a tag meta `apple-mobile-web-app-title` no HTML gerado."
         },
         "themeColor": {
-          "message": "Theme color",
-          "description": "Color used to theme the browser"
+          "message": "Cor do tema",
+          "description": "Cor usada para modificar a cor do browser"
         },
         "backgroundColor": {
-          "message": "Splash background color",
-          "description": "Background color used for the app splash screen"
+          "message": "Cor de fundo na splash screen",
+          "description": "Cor de fundo usada na splash screen"
         },
         "msTileColor": {
-          "message": "Windows app tile color",
-          "description": "Color used for the app tile on Windows"
+          "message": "Cor do ícone do aplicativo no Windows",
+          "description": "Cor usada no ícone do aplicativo no Windows"
         },
         "appleMobileWebAppStatusBarStyle": {
-          "message": "Apple mobile status bar style",
-          "description": "Style for the web app status bar on iOS"
+          "message": "Estilo da barra de status em celulares Apple",
+          "description": "Cor da barra de status no iOS"
         }
       }
     }
@@ -460,18 +469,18 @@
   "cypress": {
     "tasks": {
       "test": {
-        "description": "Run e2e tests with `cypress run`",
-        "headless": "Run in headless mode without GUI",
-        "mode": "Specify the mode the dev server should run in",
-        "url": "Run e2e tests against given url instead of auto-starting dev server"
+        "description": "Executar testes e2e (end-to-end) com `cypress run`",
+        "headless": "Executar em modo headless, sem interface",
+        "mode": "Especificar em qual modo o servidor deve executar",
+        "url": "Executar testes e2e (end-to-end) na url fornecida em vez de iniciar um servidor automaticamente"
       }
     }
   },
   "nightwatch": {
     "tasks": {
       "test": {
-        "description": "Run e2e tests with nightwatch",
-        "url": "Run e2e tests against given url instead of auto-starting dev server"
+        "description": "Executar testes e2e (end-to-end) com nightwatch",
+        "url": "Executar testes e2e (end-to-end) na url fornecida em vez de iniciar um servidor automaticamente"
       }
     }
   }
